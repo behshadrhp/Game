@@ -23,8 +23,21 @@ func RockPaperScissors() {
 	random := [3]string{"rock", "paper", "scissors"}
 	var user string
 
-	fmt.Print(" please choice `rock` or `paper` or `scissors` -write-> : ")
+	fmt.Print("please choice `rock` or `paper` or `scissors` -write-> : ")
 	fmt.Scan(&user)
 	computer := random[rand.Intn(len(random))]
-	fmt.Println(user, computer)
+	RulesOfTheGame(user, computer)
+}
+
+func RulesOfTheGame(user string, computer string) {
+	if user == "rock" && computer == "rock" {
+		equal := "--- is equals ---"
+		fmt.Println(equal)
+	} else if user == "rock" && computer == "paper" {
+		userWin := "\n ^--^ you are win ^--^"
+		fmt.Println(userWin)
+	} else if user == "rock" && computer == "scissors" {
+		computerWin := "-_- you are loss :)"
+		fmt.Println(computerWin)
+	}
 }
