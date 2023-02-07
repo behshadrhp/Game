@@ -57,5 +57,14 @@ func RulesOfTheGame(user string, computer string) {
 	} else if user == "paper" && computer == "scissors" {
 		computerWin := "-_- you are loss :)"
 		fmt.Println(computerWin)
+	} else if user == "scissors" && computer == "scissors" {
+		equal := "--- is equals ---"
+		fmt.Println(equal)
+	} else if user == "scissors" && computer == "paper" {
+		userWin := "\n ^--^ you are win ^--^"
+		fmt.Println(userWin)
+	} else if user == "scissors" && computer == "rock" {
+		computerWin := "-_- you are loss :)"
+		fmt.Println(computerWin)
 	}
 }
