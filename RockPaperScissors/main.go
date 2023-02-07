@@ -43,11 +43,11 @@ func RulesOfTheGame(user string, computer string) {
 		equal := "--- is equals ---"
 		fmt.Println(equal)
 	} else if user == "rock" && computer == "paper" {
-		userWin := "\n ^--^ you are win ^--^"
-		fmt.Println(userWin)
-	} else if user == "rock" && computer == "scissors" {
 		computerWin := "-_- you are loss :)"
 		fmt.Println(computerWin)
+	} else if user == "rock" && computer == "scissors" {
+		userWin := "\n ^--^ you are win ^--^"
+		fmt.Println(userWin)
 	} else if user == "paper" && computer == "paper" {
 		equal := "--- is equals ---"
 		fmt.Println(equal)
