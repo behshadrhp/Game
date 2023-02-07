@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"os"
 	"time"
 )
 
@@ -65,6 +66,10 @@ func RulesOfTheGame(user string, computer string) {
 		computerWin := "-_- you are loss :)"
 		computer_score += 1
 		fmt.Println(computerWin)
+	} else {
+		fmt.Print("\n--- EXIT ---\n")
+		fmt.Println("You have entered an invalid entry. Please try again")
+		os.Exit(0)
 	}
 }
 
@@ -93,5 +98,6 @@ func main() {
 	} else {
 		fmt.Print("\n--- EXIT ---\n")
 		fmt.Print("\nInvalid input Please enter a valid input\n")
+		os.Exit(0)
 	}
 }
