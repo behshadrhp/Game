@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"time"
 )
 
 func main() {
@@ -22,13 +23,19 @@ func main() {
 }
 
 func RockPaperScissors() {
-	random := [3]string{"rock", "paper", "scissors"}
+	selection := [3]string{"rock", "paper", "scissors"}
 	var user string
 
 	fmt.Print("please choice `rock` or `paper` or `scissors` -write-> : ")
 	fmt.Scan(&user)
-	computer := random[rand.Intn(len(random))]
+	rand.Seed(time.Now().UnixNano())
+	randomNum := random(0, 3)
+	computer := selection[randomNum]
 	RulesOfTheGame(user, computer)
+}
+
+func random(min int, max int) int {
+	return rand.Intn(max-min) + min
 }
 
 func RulesOfTheGame(user string, computer string) {
